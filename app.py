@@ -14,9 +14,6 @@ with open("models/final_gradient_boosting_model.pkl", "rb") as model_file:
 with open("models/kmeans_model.pkl", "rb") as kmeans_file:
     kmeans = pickle.load(kmeans_file)
 
-# debug
-print(gb_model)
-
 # Constants
 TORONTO_CENTER_LAT = 43.6532
 TORONTO_CENTER_LONG = -79.3832
@@ -78,9 +75,6 @@ def predict():
             columns=['Distance_From_Center', 'Hour', 'Month', 'Cluster']
             )
 
-        # debug
-        print("Features for Prediction: ", features)
-
         # Make prediction
         prediction = gb_model.predict(features)[0]
         probability = gb_model.predict_proba(features)[0]
@@ -94,9 +88,6 @@ def predict():
                 "Fatal/Injury": probability[1]
             }
         }
-
-        # debug
-        print("Rendering with prediction:", result["predicted_severity"], "and probability:", result["confidence_scores"]["Fatal/Injury"])
 
         return render_template(
             "result.html",
