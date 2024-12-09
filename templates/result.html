@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+<h1>Prediction Result</h1>
+<p>Severity: {{ prediction }}</p>
+<p>Probability of Fatal/Injury: {{ probability }}</p>
+<a href="/">Go Back</a>
+{% endblock %}
+
