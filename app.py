@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
 import requests
+import os
 
 # Load the saved model
 with open("models/final_gradient_boosting_model.pkl", "rb") as model_file:
@@ -19,7 +20,7 @@ print(gb_model)
 # Constants
 TORONTO_CENTER_LAT = 43.6532
 TORONTO_CENTER_LONG = -79.3832
-GOOGLE_API_KEY = "AIzaSyDAvnJ9q0G-Ci6MU61CHah1NBd5FpP7wQ0"
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 app = Flask(__name__)
 
