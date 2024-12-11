@@ -3,15 +3,27 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>"Welcome to the Toronto Motorcycle Accident Severity Prediction API!"</h1>
-<p>Please Enter Collision Details</p>
-<form action="/predict" method="post">
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address" required><br>
-    <label for="time">Time (HH:MM):</label>
-    <input type="text" id="time" name="time" required><br>
-    <label for="date">Date (YYYY-MM-DD):</label>
-    <input type="text" id="date" name="date" required><br>
-    <button type="submit">Predict</button>
-</form>
+<div class="jumbotron text-center">
+    <h1 class="display-6">Welcome to the Toronto Motorcycle Accident Severity Prediction Tool</h1>
+    <p class="lead">Enter collision details below to get a prediction of severity and probabilities.</p>
+</div>
+<div class="card shadow-sm p-4">
+    <form action="/predict" method="post">
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time (HH:MM)</label>
+            <input type="text" id="time" name="time" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date (YYYY-MM-DD)</label>
+            <input type="text" id="date" name="date" class="form-control" required>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-danger">Predict</button>
+        </div>
+    </form>
+</div>
 {% endblock %}

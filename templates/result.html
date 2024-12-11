@@ -3,9 +3,11 @@
 {% block title %}Result{% endblock %}
 
 {% block content %}
-<h1>Prediction Result</h1>
-<p>Severity: {{ prediction }}</p>
-<p>Probability of Fatal/Injury: {{ probability }}</p>
-<a href="/">Go Back</a>
+<div class="card shadow-sm p-4 text-center">
+    <h2>Prediction Result</h2>
+    <p><strong>Severity:</strong> {{ prediction }}</p>
+    <p><strong>Probability of Fatal/Injury:</strong> {{ probability }}</p>
+    <a href="/" class="btn btn-secondary mt-3">Go Back</a>
+</div>
 {% endblock %}
 

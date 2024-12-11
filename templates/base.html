@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}COMP309 Project{% endblock %}</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" /> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>COMP309 Sec 401 Group 7 Project</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-        </nav>
+    <header class="text-white py-3">
+        <div class="container">
+            <h1 class="text-center">COMP309 Group 7 - Motorcycle Accident Severity Prediction</h1>
+            <nav class="nav justify-content-center">
+                <a class="nav-link text-white" href="/">Home</a>
+                <a class="nav-link text-white" href="/about">About</a>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="container py-4">
         {% block content %}{% endblock %}
     </main>
-    <footer>
-        <p>&copy; 2024 COMP309 Group 7</p>
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 COMP309 Group 7</p>
+        </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

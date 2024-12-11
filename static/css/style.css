@@ -1,10 +1,41 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-h1 {
-    color: #333;
+.btn {
+    background-color: red;
+    color: white;
+    min-width: 150px;
+}
+
+/* Header */
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header {
+    background-color: #002147;
+    color: white;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+}
+
+/* Forms */
+form label {
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    font-size: 1rem;
+    font-weight: bold;
 }
